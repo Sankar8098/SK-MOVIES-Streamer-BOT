@@ -128,7 +128,7 @@ async def help_handler(bot, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("💁‍♂️ Owner", url="https://github.com/LazyDeveloperr")],
+                [InlineKeyboardButton("💁‍♂️ Owner", url="https://github.com/SK_MoviesOffl")],
                 [InlineKeyboardButton("💥 Source Code", url="https://github.com/LazyDeveloperr/Lazy-Streamer-BOT")]
             ]
         )
