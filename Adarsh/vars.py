@@ -17,7 +17,7 @@ class Var(object):
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', "-1001682397310"))
     PORT = int(getenv('PORT', "8080"))
-    BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '54.227.197.196'))
+    BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', 'https://preliminary-alameda-skvillageboys.koyeb.app/'))
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "5821871362").split())  
     NO_PORT = bool(getenv('NO_PORT', False))
@@ -29,7 +29,7 @@ class Var(object):
     
     else:
         ON_HEROKU = False
-    FQDN = str(getenv('FQDN', "54.227.197.196")) if not ON_HEROKU or getenv('FQDN', '54.227.197.196') else APP_NAME+'.herokuapp.com'
+    FQDN = str(getenv('FQDN', "https://preliminary-alameda-skvillageboys.koyeb.app/")) if not ON_HEROKU or getenv('FQDN', 'https://preliminary-alameda-skvillageboys.koyeb.app/') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
