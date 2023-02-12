@@ -29,7 +29,7 @@ class Var(object):
     
     else:
         ON_HEROKU = False
-    FQDN = str(getenv('FQDN', "54.227.197.196:8080")) if not ON_HEROKU or getenv('FQDN', '54.227.197.196:8080') else APP_NAME+'.herokuapp.com'
+    FQDN = str(getenv('FQDN', "54.227.197.196")) if not ON_HEROKU or getenv('FQDN', '54.227.197.196') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
         URL = "https://{}/".format(FQDN)
